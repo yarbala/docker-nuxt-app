@@ -1,19 +1,8 @@
 ARG NODE_VERSION=12.18.3
 FROM node:${NODE_VERSION}-alpine
 
-ARG NODE_ENV=production
-ENV NODE_ENV ${NODE_ENV}
-
 ENV APP_ROOT /home/app/web
 ENV HOST 0.0.0.0
-
-###########################################################################
-# Set Timezone
-###########################################################################
-ARG TZ=UTC
-ENV TZ ${TZ}
-
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apk add --update bash
 
@@ -29,3 +18,5 @@ RUN wget --no-check-certificate https://storage.googleapis.com/downloads.webmpro
   rm -rf libwebp-1.0.0 libwebp-1.0.0.tar.gz
 
 EXPOSE 3000
+
+WORKDIR ${APP_ROOT}
