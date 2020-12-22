@@ -1,2 +1,3 @@
 # docker-nuxt-app
-Docker
+
+Dockerfile to build base nuxt app
