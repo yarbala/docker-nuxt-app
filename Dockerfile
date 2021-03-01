@@ -16,6 +16,8 @@ RUN wget --no-check-certificate https://storage.googleapis.com/downloads.webmpro
   cd .. && \
   rm -rf libwebp-1.0.0 libwebp-1.0.0.tar.gz
 
+RUN npm install pm2 -g
+
 EXPOSE 3000
 
 WORKDIR ${APP_ROOT}
