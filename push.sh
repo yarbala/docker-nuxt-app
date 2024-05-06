@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker build -t yarbala/nuxt-app:v16.10 .
+docker build -t yarbala/nuxt-app:v16.16 .
 
-docker push yarbala/nuxt-app:v16.10
+docker push yarbala/nuxt-app:v16.16
